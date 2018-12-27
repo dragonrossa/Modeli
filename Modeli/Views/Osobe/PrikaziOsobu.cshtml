@@ -1,0 +1,45 @@
+﻿@model  Modeli.Models.Osoba
+@{
+    Layout = null;
+    string datumRod = Model.DatumRodjenja == null ? "" : ((DateTime)Model.DatumRodjenja).ToString("dd.MM.yyyy");
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PrikaziOsobu</title>
+    <style>
+        label {
+            width: 100px;
+            display: inline-block;
+            margin: 10px;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div> 
+        <form method="post" action="~/Views/Osobe/PrikaziOsobu.cshtml">
+            <div>
+                <label>Ime: @Model.Ime</label>
+            </div>
+            <div>
+                <label>Prezime: @Model.Prezime</label>
+            </div>
+            <div>
+                <label>Email: @Model.Email</label>
+            </div>
+            <div>
+                <label>Datum rodjenja: @datumRod</label>
+            </div>
+            <div>
+                <a href="~/Views/Osobe/PopuniOsobu.cshtml">Natrag</a>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
