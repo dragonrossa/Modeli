@@ -1,0 +1,62 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PopuniOsobu</title>
+    <style>
+    label{
+        width:100px;
+        display:inline-block;
+        margin:10px;
+    }
+
+    button{
+        margin:10px;
+        background-color:indianred;
+        color:aliceblue;
+        height:50px;
+        width:100px;
+        text-align:center;
+    }
+
+    body{
+        background-color:lightskyblue;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Obrazac za unos podataka o korisniku</h2>
+    </div>
+    <div> 
+        <form method="post" action="~/Views/Osobe/PrikaziOsobu.cshtml">
+            <div>
+                <label>Ime</label>
+                <input type="text" name="Ime" />
+            </div>
+            <div>
+                <label>Prezime</label>
+                <input type="text" name="Prezime" />
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="text" name="Email" />
+            </div>
+            <div>
+                <label>Datum rodjenja</label>
+                <input type="text" name="DatumRodjenja" />
+            </div>
+            <div>
+                <button type="submit">Pošalji</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
