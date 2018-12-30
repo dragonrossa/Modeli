@@ -17,26 +17,51 @@
             margin: 10px;
         }
 
+        body {
+            background-color: lightskyblue;
+        }
+
+        h1 
+        {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        a {
+            display: inline-block;
+            margin-left: 10px;
+        }
        
     </style>
 </head>
 <body>
     <div> 
-        <form method="post" action="~/Views/Osobe/PrikaziOsobu.cshtml">
+        <form method="post" action="~/Osobe/PrikaziOsobu">
+            <div><h1>Ispis podataka o upisanoj osobi</h1></div>
             <div>
-                <label>Ime: @Model.Ime</label>
+                <label>
+                <strong>Ime: </strong>
+              <br />  @Model.Ime
+                </label>
             </div>
             <div>
-                <label>Prezime: @Model.Prezime</label>
+                <label>
+                <strong>Prezime:</strong>
+                <br /> @Model.Prezime
+                </label>
             </div>
             <div>
-                <label>Email: @Model.Email</label>
+                <label><strong>Email:</strong>
+                <br />
+                @Model.Email</label>
             </div>
             <div>
-                <label>Datum rodjenja: @datumRod</label>
+                <label><strong>Datum rodjenja:</strong>
+                <br />
+                @datumRod</label>
             </div>
             <div>
-                <a href="~/Views/Osobe/PopuniOsobu.cshtml">Natrag</a>
+                <a href="~/Osobe/PopuniOsobu">Natrag</a>
             </div>
 
         </form>
